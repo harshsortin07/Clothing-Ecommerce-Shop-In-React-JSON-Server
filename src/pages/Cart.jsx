@@ -3,6 +3,7 @@ import { CartItemsList, CartTotals, SectionTitle } from '../components'
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import { CartWidget } from 'sortin-vite-library';
 
 const Cart = () => {
   
@@ -17,7 +18,7 @@ const Cart = () => {
       navigate("/thank-you");
     }
   }
-
+console.log(cartItems)
   return (
     <>
     <SectionTitle title="Cart" path="Home | Cart" />
@@ -27,6 +28,7 @@ const Cart = () => {
         </div>
         <div className='lg:col-span-4 lg:pl-4'>
           <CartTotals />
+          <CartWidget cartItems={cartItems}/>
           {loginState ? (
             <button onClick={isCartEmpty} className='btn bg-blue-600 hover:bg-blue-500 text-white btn-block mt-8'>
               order now

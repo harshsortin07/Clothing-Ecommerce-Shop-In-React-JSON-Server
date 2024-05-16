@@ -8433,6 +8433,16 @@
           "isInWishList": false
         }
       ]
+    },
+    {
+      "id": "ROw4X1gbZuvLybahk_e4m",
+      "name": "Harsh",
+      "lastname": "Agrawal",
+      "email": "harsh.mobile231@gmail.com",
+      "phone": "09131186159",
+      "adress": "raipur",
+      "password": "harshu",
+      "userWishlist": []
     }
   ],
   "orders": [

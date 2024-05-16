@@ -21,6 +21,8 @@ import {
 } from "../features/wishlist/wishlistSlice";
 import { toast } from "react-toastify";
 import { store } from "../store";
+import { Product } from "sortin-vite-library";
+// import Sortin from 'harsh_trial_package'
 
 export const singleProductLoader = async ({ params }) => {
   const { id } = params;
@@ -114,7 +116,7 @@ const SingleProduct = () => {
     store.dispatch(removeFromWishlist({ userObj }));
     toast.success("Product removed from the wishlist!");
   };
-
+console.log(typeof(productData.id))
   return (
     <>
       <SectionTitle title="Product page" path="Home | Shop | Product page" />
@@ -215,8 +217,11 @@ const SingleProduct = () => {
                 Add to wishlist
               </button>
             )}
+
           </div>
           <div className="other-product-info flex flex-col gap-x-2">
+          <Product id={productData?.id}/>
+
             <div className="badge bg-gray-700 badge-lg font-bold text-white p-5 mt-2">
               Brand: {productData?.brandName}
             </div>
